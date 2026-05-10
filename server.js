@@ -40,9 +40,9 @@ async function ensureAccessToken() {
 }
 
 app.get('/auth', (req, res) => {
-  const url = ${AUTH_URL}?response_type=code&client_id=${encodeURIComponent(CLIENT_ID)}&redirect_uri=${encodeURIComponent(REDIRECT_URI)};
-  res.redirect(url);
-});
+ const url = ${AUTH_URL}?response_type=code&client_id=${encodeURIComponent(CLIENT_ID)}&redirect_uri=${encodeURIComponent(REDIRECT_URI)};
+
+
 
 app.get(REDIRECT_PATH, async (req, res) => {
   try {
