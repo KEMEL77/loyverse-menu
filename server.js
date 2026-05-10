@@ -6,8 +6,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const CLIENT_ID = process.env.CLIENT_ID;
-const CLIENT_SECRET = process.env.CLIENT_SECRET;
+const CLIENT_ID = process.env.SBDebWzlPtr-Gnzuh_S_;
+const CLIENT_SECRET = process.env.Xt88vDjeNjIsT9VFgaWZDKtp-AZXwmKF4erw0bcDJQdhPCwHURbWHA==;
 const PORT = process.env.PORT || 3000;
 const BASE_URL = process.env.BASE_URL;
 const REDIRECT_PATH = '/callback';
@@ -40,9 +40,9 @@ async function ensureAccessToken() {
 }
 
 app.get('/auth', (req, res) => {
- const url = ${AUTH_URL}?response_type=code&client_id=${encodeURIComponent(CLIENT_ID)}&redirect_uri=${encodeURIComponent(REDIRECT_URI)};
-
-
+  const url = ${AUTH_URL}?response_type=code&client_id=${encodeURIComponent(CLIENT_ID)}&redirect_uri=${encodeURIComponent(REDIRECT_URI)};
+  res.redirect(url);
+});
 
 app.get(REDIRECT_PATH, async (req, res) => {
   try {
