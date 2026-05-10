@@ -106,4 +106,3 @@ setInterval(() => { syncProducts(); }, 5 * 60 * 1000);
 app.get('/health', (req, res) => res.send('ok'));
 
 app.listen(PORT, () => { console.log('Server listening on', PORT); });
-
